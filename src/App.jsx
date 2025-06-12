@@ -110,10 +110,10 @@ function App() {
         </ul>
       </div>
       <div className="col-span-4 p-10">
-        <h1 className="p-3 text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700"
-        >Hello User, Ask me Anything</h1>
-        {
-          loader?
+        <h1 className="p-3 text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
+          Hello User, Ask me Anything
+        </h1>
+        {loader ? (
           <div role="status">
             <svg
               aria-hidden="true"
@@ -133,9 +133,18 @@ function App() {
             </svg>
             <span class="sr-only">Loading...</span>
           </div>
-          : null
-        }
-        <div ref={scrollToAns} className="container h-120 overflow-scroll">
+        ) : null}
+        <div
+          ref={scrollToAns}
+          //overflow scroll
+          style={{
+            overflowY: "scroll",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            WebkitScrollbar: "none",
+          }}
+          className="container h-120"
+        >
           <div className="text-zinc-300">
             <ul>
               {result.map((item, index) => (
@@ -146,7 +155,7 @@ function App() {
                   {item.type === "q" ? (
                     <li
                       key={index + Math.random()}
-                      className="text-right p-1 border-8 bg-zinc-700 border-zinc-700 rounded-tl-3xl rounded-bl-3xl rounded-br-3xl w-fit"
+                      className="text-right p-1 border-8 bg-zinc-700 border-zinc-700 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl w-fit mt-4 mb-1"
                     >
                       <Answers
                         ans={item.text}
