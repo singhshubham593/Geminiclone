@@ -102,7 +102,7 @@ function App() {
             recentHistory.map((item) => (
               <li
                 onClick={() => setSelectHistory(item)}
-                className="p-1 pl-5 truncate text-zinc-400 cursor-pointer hover:bg-zinc-700 hover:text-zinc-200"
+                className="p-1 md:pl-5 truncate text-zinc-400 cursor-pointer hover:bg-zinc-700 hover:text-zinc-200"
               >
                 {item}
               </li>
