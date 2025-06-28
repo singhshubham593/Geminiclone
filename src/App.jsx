@@ -83,8 +83,8 @@ function App() {
   return (
     <div className="grid grid-cols-5 h-screen text-center">
       <div className="col-span-1 bg-zinc-800 pt-3 px-2">
-        <h1 className="text-xl text-white font-bold flex text-center justify-center">
-          <span>Recent History</span>
+        <h1 className="sm:text-sm  text-white font-bold flex text-center justify-center ">
+          <span >Recent History</span>
           <button onClick={clearHistory} className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ function App() {
         </ul>
       </div>
       <div className="col-span-4 p-10">
-        <h1 className="p-3 text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
+        <h1 className="p-3 md:text-4xl text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700">
           Hello User, Ask me Anything
         </h1>
         {loader ? (
@@ -143,7 +143,7 @@ function App() {
             msOverflowStyle: "none",
             WebkitScrollbar: "none",
           }}
-          className="container h-120"
+          className="container h-110 "
         >
           <div className="text-zinc-300">
             <ul>
@@ -183,7 +183,7 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="bg-zinc-800 w-1/2 p-1 text-white m-auto mt-4 rounded-4xl border border-zinc-700 flex h-16">
+        <div className="bg-zinc-800 sm:w-1 md:w-1/2 p-1 text-white m-auto mt-4 rounded-4xl border border-zinc-700 flex h-16">
           <input
             type="text"
             value={question}
